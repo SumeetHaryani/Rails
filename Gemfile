@@ -65,6 +65,8 @@ group :development do
   # gem "spring"
 
   gem "hotwire-livereload", "~> 1.2"
+  gem 'bootstrap', '~> 4.3.1'
+
 end
 
 group :test do
