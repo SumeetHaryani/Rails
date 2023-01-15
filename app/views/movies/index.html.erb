@@ -1,8 +1,9 @@
 <% @movies.each do |movie| %>
-    <li> <%=movie.title%>-<%=movie.rating%>(<%= number_to_currency(movie.total_gross, precision: 0) %>
+    <li> <%=movie.title%>-<%=movie.rating%>(<%= total_gross(movie) %>
 )
 <% if movie.description %>
-<p><%=movie.description%> <br> Released On <%=movie.release_on%></p>
+<p><<%= truncate(movie.description, length: 40, separator: ' ') %>
+ <br> Released On <% year_of(movie)%></p>
 </li>
 <%end%>
 <%end%>
